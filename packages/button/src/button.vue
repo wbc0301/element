@@ -19,7 +19,7 @@
   >
     <i class="el-icon-loading" v-if="loading"></i>
     <i :class="icon" v-if="icon && !loading"></i>
-    <span v-if="$slots.default"><slot></slot></span>
+    <span v-if="$slots.default"><slot></slot></span> <!-- @@@ $slots.default  判断如果组件便签之间有值 就展示 -->
   </button>
 </template>
 <script>
@@ -71,7 +71,7 @@
 
     methods: {
       handleClick(evt) {
-        this.$emit('click', evt);
+        this.$emit('click', evt); // @@@ 触发组件的自定义click事件： <el-button @click="handleClick">按钮</el-button>
       }
     }
   };
