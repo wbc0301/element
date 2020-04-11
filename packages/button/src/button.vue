@@ -20,7 +20,7 @@
   
     <i class="el-icon-loading" v-if="loading"></i>
     <i :class="icon" v-if="icon && !loading"></i>
-    <span v-if="$slots.default"><slot></slot></span> <!-- @@@ $slots.default  判断如果组件便签之间有值 就展示 -->
+    <span v-if="$slots.default"><slot></slot></span> <!-- @@@ $slots.default    判断如果组件便签之间有值 就展示 -->
   </button>
 </template>
 <script>
